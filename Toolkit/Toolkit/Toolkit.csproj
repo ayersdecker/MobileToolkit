@@ -47,6 +47,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
+		<PackageReference Include="Camera.MAUI" Version="1.4.4" />
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="7.0.0" Condition="'$(Configuration)' == 'Debug'" />
 
 		<PackageReference Include="CommunityToolkit.Maui" Version="5.2.0" />
@@ -62,6 +63,7 @@
 		<PackageReference Include="Shiny.Notifications" Version="$(ShinyVersion)" />
 		<PackageReference Include="Shiny.Net.Http" Version="$(ShinyVersion)" />
 		<PackageReference Include="Shiny.SpeechRecognition" Version="$(ShinyVersion)" />
+		<PackageReference Include="ZXing.Net" Version="0.16.9" />
 		<PackageReference Include="ZXing.Net.Maui.Controls" Version="0.3.0-preview.1" />
 		<PackageReference Include="Plugin.StoreReview" Version="5.0.1" />
 		<PackageReference Include="Plugin.Maui.Audio" Version="1.0.0" />
@@ -70,6 +72,12 @@
 
 	<ItemGroup Condition="$(TargetFramework.Contains('android')) OR $(TargetFramework.Contains('ios'))">
 		<PackageReference Include="Drastic.Flipper" Version="1.0.6" Condition="'$(Configuration)' == 'Debug'" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <MauiXaml Update="Views\QRPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	</ItemGroup>
 
 </Project>

@@ -5,12 +5,52 @@
              x:DataType="local:MainViewModel"
              x:Class="Toolkit.MainPage"
              BackgroundColor="#FFF"
-             
              Shell.BackgroundColor="White"
-             Title="Decker's Mobile Toolkit"
-             >
+             Title="Decker's Mobile Toolkit">
 
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <Button x:Name="QR_Generator"
+                Grid.Row="0" Grid.Column="0" 
+                Text="QR Creator"
+                BackgroundColor="#333"
+                BorderColor="White"
+                BorderWidth="1"
+                Clicked="QR_Generator_Clicked"/>
+        <Button Grid.Row="0" Grid.Column="1" 
+                Text="GPS Data"
+                BackgroundColor="#333"
+                BorderColor="White"
+                BorderWidth="1"/>
+        <Button Grid.Row="1" Grid.Column="0" 
+                Text="Bluetooth Client"
+                BackgroundColor="#333"
+                BorderColor="White"
+                BorderWidth="1"/>
+        <Button Grid.Row="1" Grid.Column="1" 
+                Text="Bluetooth Host"
+                BackgroundColor="#333"
+                BorderColor="White"
+                BorderWidth="1"/>
+        <Button Grid.Row="2" Grid.Column="0" 
+                Text="N/A"
+                BackgroundColor="#333"
+                BorderColor="White"
+                BorderWidth="1"/>
+        <Button Grid.Row="2" Grid.Column="1" 
+                Text="N/A"
+                BackgroundColor="#333"
+                BorderColor="White"
+                BorderWidth="1"/>
+
     </Grid>
 </ContentPage>
